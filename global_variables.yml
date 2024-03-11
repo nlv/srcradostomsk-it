@@ -1,0 +1,18 @@
+---
+maddy_version: 0.6.2
+maddy_url:  'https://maddy.email/builds/{{maddy_version}}/maddy-{{maddy_version}}-x86_64-linux-musl.tar.zst'
+maddy_archive: '/tmp/maddy-{{maddy_version}}-x86_64-linux-musl.tar.zst'
+maddy_extracted: '/tmp/maddy-{{maddy_version}}-x86_64-linux-musl'
+ubuntu_codename: focal
+# postgres_key_url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+# postgres_key_dest: /tmp/ACCC4CF8.asc
+# discourse_s3_region: ru-central1
+# disocurse_s3_endpoint: https://storage.yandexcloud.net/
+# disocurse_s3_backup_bucket: zttl-bucket/zttl_bak
+# zabbix_server: kot.so
+hostname: srcradostomsk.ru
+server_ip: 178.253.43.195
+imap_domain: srcradostomsk.ru
+# administrative_user: zet
+sshd_port: 2294
+ssl_domains_list: srcradostomsk.ru
