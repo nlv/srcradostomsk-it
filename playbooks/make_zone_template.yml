@@ -1,0 +1,16 @@
+---
+- 
+  name: "Create a template for DNS zone"
+  hosts: localhost
+  tasks:
+    #    - name: "Import secrets"
+    #      include_vars: /home/nlv/WORK/secrets.yml
+    - name: "Include global variables"
+      include_vars: global_variables.yml
+    - name: "Create template"
+      template:
+        src: ../files/zone.j2
+        dest: /tmp/zone_template
+        owner: root
+        group: root
+        mode: '0644'

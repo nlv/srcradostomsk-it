@@ -1,0 +1,20 @@
+$TTL 1d
+{{ hostname }}.	IN	SOA	ns1.reg.ru	hostmaster.ns1.reg.ru	(
+
+        1		;serial
+        14400		;refresh
+        3600		;retry
+        604800		;expire
+        10800		;minimum 
+)
+
+_dmarc	TXT	v=DMARC1;p=quarantine;ruf=mailto:{{ admin_email }}
+_mta-sts	TXT	v=STSv1; id=1
+_smtp._tls	TXT	v=TLSRPTv1;rua=mailto:{{ admin_email }}
+@	A	{{ server_ip }}
+@	MX	0	{{ imap_domain }}.
+@	TXT	v=DMARC1;p=quarantine;ruf=mailto:{{ admin_email }}
+@	TXT	v=spf1 mx ~all
+discourse	A	{{ server_ip }}
+listmonk	A	{{ server_ip }}
+www	        A	{{ server_ip }}

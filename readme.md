@@ -1,0 +1,6 @@
+- set_hostname
+- make_zone_templates
+- внести записи DNS вручную
+- пользователя не создаем (admin_user.yml)- уже создан - потом разбиремся с этим
+- пока не запрещаем заход по ssh root (better_sshd.yml)
+- опции sshd наверное нужны будут 
